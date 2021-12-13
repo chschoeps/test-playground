@@ -1,5 +1,4 @@
 import { mount, ReactWrapper } from 'enzyme';
-import * as React from 'react';
 import { MyButton } from '../my-button';
 
 
@@ -39,7 +38,7 @@ describe('MyButton component', () => {
     });
     it('should render the default label text when no label is defined', () => {
         const renderedElement = mount(createMyButtonElement())
-        const buttonTitle = renderedElement.find('button');
-        expect(buttonTitle.props().children).toBe('default label');
+        const button = renderedElement.find('button');
+        expect(button.props().children).toBe('default label');
     })
 });
